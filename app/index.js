@@ -10,7 +10,7 @@ const Home = () => {
   const router = useRouter();
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.primary }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
       <Stack.Screen
         options={{
           headerStyle: { backgroundColor: COLORS.primary },

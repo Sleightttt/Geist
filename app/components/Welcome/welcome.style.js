@@ -23,6 +23,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginTop: SIZES.large,
     height: 50,
+    shadowColor: "rgba(0, 0, 0, 0.25)", // For iOS
+    shadowOffset: {
+      width: 0,
+      height: 4, // Adjust the height based on your preference
+    },
+    shadowOpacity: 0.8, // Adjust the opacity based on your preference
+    shadowRadius: 6, // Adjust the radius based on your preference
+    elevation: 4, // For Android (adjust this value based on your preference)
   },
   searchWrapper: {
     flex: 1,
@@ -42,11 +50,20 @@ const styles = StyleSheet.create({
   searchBtn: {
     width: 50,
     height: "100%",
-    backgroundColor: COLORS.tertiary,
+    backgroundColor: COLORS.secondary,
     borderRadius: SIZES.medium,
     justifyContent: "center",
     alignItems: "center",
+    shadowColor: "rgba(0, 0, 0, 0.25)", // For iOS
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.8,
+    shadowRadius: 6,
+    elevation: 4,
   },
+
   searchBtnImage: {
     width: "50%",
     height: "50%",
@@ -62,14 +79,17 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.medium,
     borderWidth: 1,
     borderColor: activeJobType === item ? COLORS.tertiary : COLORS.secondary,
-    backgroundColor: activeJobType === item ? COLORS.tertiary : COLORS.white,
+    backgroundColor: activeJobType === item ? COLORS.secondary : COLORS.white,
     marginLeft: 1,
     marginRight: 1,
   }),
   tabText: (activeJobType, item) => ({
     fontFamily: FONT.medium,
-    color: activeJobType === item ? COLORS.secondary : COLORS.secondary,
+    color: activeJobType === item ? COLORS.white : COLORS.secondary,
   }),
+  scrollview: {
+    width: "100%",
+  },
 });
 
 export default styles;

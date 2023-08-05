@@ -6,16 +6,19 @@ import {
   TouchableOpacity,
   Image,
   FlatList,
+  ScrollView,
 } from "react-native";
 import { useRouter } from "expo-router";
 import styles from "./welcome.style";
 import { icons, SIZES } from "../../constants";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const jobTypes = ["Nearby", "New", "Popular", "Most Compatible", "Recommended"];
 
 const Welcome = () => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] = React.useState("Nearby");
+
   return (
     <View>
       <View style={styles.container}>
@@ -41,7 +44,11 @@ const Welcome = () => {
         </TouchableOpacity>
       </View>
 
-      <View>
+      <ScrollView
+        style={styles.scrollview}
+        showsHorizontalScrollIndicator={false}
+        horizontal={true}
+      >
         <FlatList
           data={jobTypes}
           renderItem={({ item }) => (
@@ -55,12 +62,12 @@ const Welcome = () => {
               <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
             </TouchableOpacity>
           )}
-          keyExtractor={(item) => item.id}
-          horizontal
+          keyExtractor={(item) => item}
+          horizontal={true}
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.tabsContainer}
         />
-      </View>
+      </ScrollView>
     </View>
   );
 };
