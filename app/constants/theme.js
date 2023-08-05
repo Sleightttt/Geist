@@ -2,7 +2,7 @@ const COLORS = {
   primary: "#A0E2FF",
   secondary: "#586994",
   tertiary: "#D4AFB9",
-  fourth: "#61E294",
+  fourth: "#F5DD90",
   fifth: "#3C362A",
 
   gray: "#83829A",
