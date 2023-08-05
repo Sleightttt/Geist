@@ -1,7 +1,7 @@
 import { View, SafeAreaView, ScrollView } from "react-native";
 import { Stack, useRouter } from "expo-router";
 import ScreenHeaderBtn from "./components/ScreenHeaderBtn/screenheaderbtn";
-import { COLORS, FONT, SIZES, SHADOWS, icons } from "./constants";
+import { COLORS, FONT, SIZES, SHADOWS, icons, images } from "./constants";
 import Welcome from "./components/Welcome/welcome";
 import Nearby from "./components/Nearby/nearby";
 import Popular from "./components/Popular/popular";
@@ -20,9 +20,9 @@ const Home = () => {
             <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
           ),
           headerRight: () => (
-            <ScreenHeaderBtn iconUrl={icons.profile} dimension="100%" />
+            <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />
           ),
-          headerTitle: "Dating App",
+          headerTitle: "Geist",
         }}
       />
       <ScrollView showsVerticalScrollIndicator={false}>

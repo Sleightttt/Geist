@@ -2,11 +2,15 @@ import { Image, TouchableOpacity, Text, View } from "react-native";
 
 import styles from "./screenheaderbtn.style";
 
-const ScreenHeaderBtn = () => {
+const ScreenHeaderBtn = ({ iconUrl, dimension, handlePress }) => {
   return (
-    <View>
-      <Text>hi</Text>
-    </View>
+    <TouchableOpacity style={styles.btnContainer} onPress={handlePress}>
+      <Image
+        source={iconUrl}
+        resizeMode="cover"
+        style={styles.btnImg(dimension)}
+      />
+    </TouchableOpacity>
   );
 };
 
