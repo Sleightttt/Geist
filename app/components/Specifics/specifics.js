@@ -1,8 +1,24 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
+import styles from "./specifics.style";
 
-const Specifics = () => {
-  return <Text>This is a user's profile page</Text>;
+const Specifics = ({ title, points }) => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>{title}:</Text>
+
+      <View style={styles.pointsContainer}>
+        {points.map((item, index) => (
+          <View>
+            <Text style={styles.pointWrapper} key={item + index}>
+              <Text style={styles.pointDot}></Text>
+              <Text style={styles.pointText}>{item}</Text>
+            </Text>
+          </View>
+        ))}
+      </View>
+    </View>
+  );
 };
 
 export default Specifics;
