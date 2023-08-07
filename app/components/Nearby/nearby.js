@@ -10,10 +10,11 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { useRouter } from "expo-router";
-import styles from "./nearby.style";
 import { COLORS, SIZES } from "../../constants";
 import NearbyCard from "../NearbyCard/nearbycard";
 import useFetch from "../../hook/useFetch";
+
+import styles from "./nearby.style";
 
 const Nearby = () => {
   const router = useRouter();
