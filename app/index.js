@@ -5,9 +5,11 @@ import { COLORS, FONT, SIZES, SHADOWS, icons, images } from "./constants";
 import Welcome from "./components/Welcome/welcome";
 import Nearby from "./components/Nearby/nearby";
 import Popular from "./components/Popular/popular";
+import { useState } from "react";
 
 const Home = () => {
   const router = useRouter();
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
@@ -27,7 +29,13 @@ const Home = () => {
       />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{ flex: 1, padding: SIZES.medium }}>
-          <Welcome />
+          <Welcome
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            handleClick={() => {
+              router.push(`/search/${searchTerm}`);
+            }}
+          />
           <Nearby />
           <Popular />
         </View>

@@ -1,8 +1,26 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, View, TouchableOpacity, Image, Linking } from "react-native";
+import styles from "./jobfooter.style";
+import { icons } from "../../constants";
 
-const JobFooter = () => {
-  return <Text>This is a user's profile page</Text>;
+const JobFooter = ({ url }) => {
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity style={styles.likeBtn}>
+        <Image
+          source={icons.heartOutline}
+          resizeMode="contain"
+          style={styles.likeBtnImage}
+        />
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.applyBtn}
+        onPress={() => Linking.openURL(url)}
+      >
+        <Text style={styles.applyBtnText}>Apply for job</Text>
+      </TouchableOpacity>
+    </View>
+  );
 };
 
 export default JobFooter;

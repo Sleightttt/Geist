@@ -12,10 +12,11 @@ import { useRouter } from "expo-router";
 import styles from "./welcome.style";
 import { icons, SIZES } from "../../constants";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { set } from "react-native-reanimated";
 
 const jobTypes = ["Nearby", "New", "Popular", "Most Compatible", "Recommended"];
 
-const Welcome = () => {
+const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] = React.useState("Nearby");
 
@@ -30,12 +31,12 @@ const Welcome = () => {
           <TextInput
             style={styles.searchInput}
             placeholder="What are you looking for?"
-            value=""
-            onChange={(e) => {}}
+            value={searchTerm}
+            onChangeText={(text) => setSearchTerm(text)}
             placeholderTextColor="#666"
           />
         </View>
-        <TouchableOpacity style={styles.searchBtn}>
+        <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>
           <Image
             source={icons.search}
             resizeMode="contain"
