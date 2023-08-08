@@ -24,8 +24,19 @@ const styles = StyleSheet.create({
   },
   cardsContainer: {
     marginTop: SIZES.medium,
+
     gap: SIZES.small,
   },
+  backgroundColor: "#ffffff", // Set the background color of the container
+  borderRadius: 8, // Adjust the value as needed
+  shadowColor: "#000", // Shadow color
+  shadowOffset: {
+    width: 0,
+    height: 1,
+  },
+  shadowOpacity: 0.2, // Opacity of the shadow
+  shadowRadius: 2, // Spread of the shadow
+  elevation: 3, // Android shadow elevation
 });
 
 export default styles;

@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
   headText: {
     fontSize: SIZES.large,
-    color: COLORS.primary,
+    color: COLORS.secondary,
     fontFamily: FONT.bold,
   },
   contentBox: {

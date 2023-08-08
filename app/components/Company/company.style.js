@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   companyName: {
     fontSize: SIZES.medium - 2,
-    color: COLORS.primary,
+    color: COLORS.secondary,
     fontFamily: FONT.medium,
   },
   locationBox: {

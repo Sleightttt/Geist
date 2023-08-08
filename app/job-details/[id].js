@@ -62,7 +62,7 @@ const JobDetails = () => {
       <Stack.Screen
         options={{
           headerStyle: {
-            backgroundColor: COLORS.lightWhite,
+            backgroundColor: COLORS.primary,
           },
           headerShadowVisible: false,
           headerBackVisible: false,

@@ -17,7 +17,7 @@ const Popular = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Nearby Users</Text>
+        <Text style={styles.headerTitle}>Nearby Jobs</Text>
         <TouchableOpacity>
           <Text style={styles.headerBtn}>Show All</Text>
         </TouchableOpacity>

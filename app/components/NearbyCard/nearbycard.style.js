@@ -10,7 +10,17 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.medium,
     justifyContent: "space-between",
     ...SHADOWS.medium,
-    shadowColor: COLORS.white,
+    // shadowColor: COLORS.white,
+    // backgroundColor: "#ffffff", // Set the background color of the container
+    borderRadius: 0, // Adjust the value as needed
+    shadowColor: "#000", // Shadow color
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.25, // Opacity of the shadow
+    shadowRadius: 3.84, // Spread of the shadow
+    elevation: 5, // Android shadow elevation
   }),
   logoContainer: (selectedJob, item) => ({
     width: 50,

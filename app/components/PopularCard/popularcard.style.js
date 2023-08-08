@@ -12,7 +12,16 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.small,
     backgroundColor: "#FFF",
     ...SHADOWS.medium,
-    shadowColor: COLORS.white,
+    // shadowColor: COLORS.white,
+    // borderRadius: 8, // Adjust the value as needed
+    shadowColor: "#000", // Shadow color
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.2, // Opacity of the shadow
+    shadowRadius: 2, // Spread of the shadow
+    elevation: 3, // Android shadow elevation
   },
   logoContainer: {
     width: 50,
